@@ -5,7 +5,7 @@
 			width="16"
 			height="16"
 			fill="currentColor"
-			class="bi bi-file-earmark-excel-fill w-4 h-4 mr-2"
+			class="bi bi-file-earmark-excel-fill"
 			viewBox="0 0 16 16"
 		>
 			<path

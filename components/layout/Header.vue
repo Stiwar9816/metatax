@@ -90,7 +90,7 @@
                     <ButtonsButtonTheme />
                     <!-- Button Theme -->
                     <!-- Button Languague -->
-                    <ButtonsButtonLanguage />
+                    <!-- <ButtonsButtonLanguage /> -->
                     <!-- Button Languague -->
                     <!-- Notification -->
                     <ButtonsButtonNotification />

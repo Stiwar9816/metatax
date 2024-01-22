@@ -5,7 +5,7 @@
 			width="16"
 			height="16"
 			fill="currentColor"
-			class="bi bi-file-earmark-text-fill mx-auto mb-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-300"
+			class="bi bi-file-earmark-text-fill"
 			viewBox="0 0 16 16"
 		>
 			<path
