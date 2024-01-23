@@ -10,7 +10,7 @@
             <CardsCardBase :icon="IconBarChartSteps" label="Recibidos" :total="603557627" />
             <CardsCardBase :icon="IconBarChartSteps" label="Monto" :total="2857530574" />
         </div>
-        <!-- <ChartsChartColumn /> -->
+        <ChartsChartColumn :labels="labelsChart" :series="columnChartSeries" />
         <TablesTableBase :fields="fields" :items="items" :excel-fields="excelColumns" filename-export="análisis_riesgo_fiscal" />
     </div>
 </template>
@@ -46,7 +46,18 @@
             text: '2023-12-21 - Auto Generado',
         },
     ];
-
+    // Charts Data
+    const labelsChart = ['2018', '2019', '2020', '2021', '2022', '2023', '2024'];
+    const columnChartSeries = ref([
+        {
+            name: 'Emitidos',
+            data: [44, 55, 57, 56, 61, 58, 63],
+        },
+        {
+            name: 'Recibidos',
+            data: [76, 85, 101, 98, 87, 105, 91],
+        },
+    ]);
     const fields =
         ref([
             { field: 'id', title: 'Id' },

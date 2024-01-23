@@ -10,7 +10,7 @@
                 <h5 class="text-xl md:text-xl font-semibold dark:text-white-light">{{ props.label }}</h5>
             </div>
         </div>
-        <div class="my-2 ml-2 text-base md:text-base font-semibold text-[#e95f2b]">
+        <div class="my-2 ml-2 text-base md:text-base font-semibold text-[#e7515a] hover:text-[#ad4045]">
             <span class="ltr:mr-2 rtl:ml-2">{{ currencyFormatter('MXN', props.total) }} MXN</span>
         </div>
     </div>
