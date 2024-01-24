@@ -2,7 +2,7 @@
     <header class="z-40" :class="{ dark: store.semidark && store.menu === 'horizontal' }">
         <div class="shadow-sm">
             <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
-                <div class="horizontal-logo flex items-center justify-between ltr:mr-2 rtl:ml-2 lg:hidden">
+                <div :class="{ 'ltr:mr-2 rtl:ml-2': store.rtlClass === 'rtl' }" class="horizontal-logo flex items-center justify-between lg:hidden">
                     <!-- Logo -->
                     <NuxtLink to="/" class="main-logo flex shrink-0 items-center">
                         <img class="inline w-8 ltr:-ml-1 rtl:-mr-1" src="/assets/images/logo.svg" alt="" />
@@ -14,8 +14,7 @@
                     <!-- Logo -->
                     <!-- Toogle Sidebar -->
                     <a
-                        href="javascript:;"
-                        class="collapse-icon flex flex-none rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 hover:text-primary ltr:ml-2 rtl:mr-2 dark:bg-dark/40 dark:text-[#d0d2d6] dark:hover:bg-dark/60 dark:hover:text-primary lg:hidden"
+                        class="collapse-icon cursor-pointer flex flex-none rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 hover:text-primary ltr:ml-2 rtl:mr-2 dark:bg-dark/40 dark:text-[#d0d2d6] dark:hover:bg-dark/60 dark:hover:text-primary lg:hidden"
                         @click="store.toggleSidebar()"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +30,7 @@
                     class="flex items-center space-x-1.5 ltr:ml-auto rtl:mr-auto rtl:space-x-reverse dark:text-[#d0d2d6] sm:flex-1 ltr:sm:ml-0 sm:rtl:mr-0 lg:space-x-2"
                 >
                     <!-- Button Search -->
-                    <div class="sm:ltr:mr-auto sm:rtl:ml-auto">
+                    <div class="sm:ml-4 sm:ltr:mr-auto sm:rtl:ml-auto">
                         <form
                             class="absolute inset-x-0 top-1/2 z-10 mx-4 hidden -translate-y-1/2 sm:relative sm:top-0 sm:mx-0 sm:block sm:translate-y-0"
                             :class="{ '!block': search }"
@@ -96,7 +95,17 @@
                     <ButtonsButtonNotification />
                     <!-- Notification -->
                     <!-- User Menu -->
-                    <ButtonsButtonUserMenu :menu-links="menuLinks" />
+                    <ButtonsButtonUserMenu :menu-links="menuLinks" @open-modal="openModal" />
+                    <ModalsChangeFiel
+                        v-model:modal-show-cer="isModalOpenFiel"
+                        :modal-title="modalTitle"
+                        @update:modalShowCer="(value: boolean) => updateModalState('fiel', value)"
+                    />
+                    <ModalsChangePassword
+                        v-model:modal-show="isModalOpenPassword"
+                        :modal-title="modalTitle"
+                        @update:modalShow="(value: boolean) => updateModalState('password', value)"
+                    />
                     <!-- User Menu -->
                 </div>
             </div>
@@ -122,27 +131,61 @@
     const search = ref<boolean>(false);
     const menuLinks: MenuLinks[] = [
         {
-            to: '',
+            to: '/administracion-usuarios',
             icon: IconPersonFillGear,
             label: 'Administración de usuarios',
         },
         {
-            to: '',
             icon: IconFileEarmarkArrowUpfill,
             label: 'Actualizar FIEL',
         },
         {
-            to: '',
             icon: IconSearch,
             label: 'Parámetros de auditoria',
         },
         {
-            to: '',
             icon: IconKeyFill,
             label: 'Cambiar contraseña',
         },
     ];
+    // Data
+    const isModalOpenFiel = ref<boolean>(false);
+    const isModalOpenPassword = ref<boolean>(false);
+    const modalTitle = ref<string>('');
 
+    // Method to open modal
+    const openModal = (title: string) => {
+        switch (title) {
+            case 'Actualizar FIEL':
+                // Abre el modal correspondiente para 'Actualizar FIEL'
+                modalTitle.value = title;
+                isModalOpenFiel.value = true;
+                break;
+            case 'Cambiar contraseña':
+                // Abre el modal correspondiente para 'Cambiar contraseña'
+                modalTitle.value = title;
+                isModalOpenPassword.value = true;
+                break;
+            // Agrega más casos según sea necesario
+            default:
+                // Por defecto, no hace nada o puedes manejar un caso genérico
+                break;
+        }
+    };
+
+    const updateModalState = (modalType: string, value: boolean) => {
+        switch (modalType) {
+            case 'fiel':
+                isModalOpenFiel.value = value;
+                break;
+            case 'password':
+                isModalOpenPassword.value = value;
+                break;
+            default:
+                // Por defecto, no hace nada o puedes manejar un caso genérico
+                break;
+        }
+    };
     onMounted(() => {
         setActiveDropdown();
     });

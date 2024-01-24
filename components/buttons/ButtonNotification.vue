@@ -21,21 +21,21 @@
                         <path d="M12 6V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
 
-                    <span class="absolute top-0 flex h-3 w-3 ltr:right-0 rtl:left-0">
+                    <!-- <span class="absolute top-0 flex h-3 w-3 ltr:right-0 rtl:left-0">
                         <span
                             class="absolute -top-[3px] inline-flex h-full w-full animate-ping rounded-full bg-success/50 opacity-75 ltr:-left-[3px] rtl:-right-[3px]"
                         ></span>
                         <span class="relative inline-flex h-[6px] w-[6px] rounded-full bg-success"></span>
-                    </span>
+                    </span> -->
                 </button>
                 <template #content="{ close }">
                     <ul class="w-[300px] divide-y !py-0 text-dark dark:divide-white/10 dark:text-white-dark sm:w-[350px]">
                         <li>
                             <div class="flex items-center justify-between px-4 py-2 font-semibold">
                                 <h4 class="text-lg">Notificaciones</h4>
-                                <template v-if="notifications.length">
+                                <!-- <template v-if="notifications.length">
                                     <span class="badge bg-primary/80" v-text="notifications.length + 'New'"></span>
-                                </template>
+                                </template> -->
                             </div>
                         </li>
                         <template v-for="notification in notifications" :key="notification.id">
@@ -44,7 +44,7 @@
                                     <div class="grid place-content-center rounded">
                                         <div class="relative h-12 w-12">
                                             <img class="h-12 w-12 rounded-full object-cover" :src="`/assets/images/${notification.profile}`" alt="" />
-                                            <span class="absolute right-[6px] bottom-0 block h-2 w-2 rounded-full bg-success"></span>
+                                            <!-- <span class="absolute right-[6px] bottom-0 block h-2 w-2 rounded-full bg-success"></span> -->
                                         </div>
                                     </div>
                                     <div class="flex flex-auto ltr:pl-3 rtl:pr-3">
@@ -71,13 +71,13 @@
                                 </div>
                             </li>
                         </template>
-                        <template v-if="notifications.length">
+                        <!-- <template v-if="notifications.length">
                             <li>
                                 <div class="p-4">
                                     <button class="btn btn-primary btn-small block w-full" @click="close()">Read All Notifications</button>
                                 </div>
                             </li>
-                        </template>
+                        </template> -->
                         <template v-if="!notifications.length">
                             <li>
                                 <div class="!grid min-h-[200px] place-content-center text-lg hover:!bg-transparent">

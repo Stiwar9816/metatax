@@ -1,2 +1,4 @@
 @import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
+@import 'tippy.js/dist/tippy.css';
+@import 'datatable.css';
 @import 'tailwind.css';

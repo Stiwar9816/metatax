@@ -4,7 +4,7 @@ export type Links = {
 };
 
 export type MenuLinks = {
-    to: string;
+    to?: string;
     icon: object;
     label: string;
 };

@@ -17,8 +17,29 @@
             type: Array,
             default: [],
         },
+        fileNameExport: String,
         series: Object,
     });
+    // Const
+    const name = 'es';
+    const options = {
+        toolbar: {
+            exportToSVG: 'Descargar SVG',
+            exportToPNG: 'Descargar PNG',
+            exportToCSV: 'Descargar CSV',
+            menu: 'Menú',
+            selection: 'Selección',
+            selectionZoom: 'Zoom de selección',
+            zoomIn: 'Acercar',
+            zoomOut: 'Disminuir el zoom',
+            pan: 'Panorámica',
+            reset: 'Restablecer zoom',
+        },
+    };
+    const es = {
+        name: name,
+        options: options,
+    };
     const columnChart = computed(() => {
         const isDark = store.theme === 'dark' || store.isDarkMode ? true : false;
         const isRtl = store.rtlClass === 'rtl' ? true : false;
@@ -26,11 +47,24 @@
             chart: {
                 height: 300,
                 type: 'bar',
+                locales: [es],
+                defaultLocale: 'es',
                 zoom: {
                     enabled: true,
                 },
                 toolbar: {
                     show: true,
+                    export: {
+                        csv: {
+                            filename: props.fileNameExport,
+                        },
+                        png: {
+                            filename: props.fileNameExport,
+                        },
+                        svg: {
+                            filename: props.fileNameExport,
+                        },
+                    },
                 },
             },
             colors: ['#805dca', '#e7515a'],

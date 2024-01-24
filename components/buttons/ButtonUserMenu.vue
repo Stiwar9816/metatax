@@ -3,14 +3,20 @@
         <client-only>
             <Popper :placement="store.rtlClass === 'rtl' ? 'bottom-end' : 'bottom-start'" offsetDistance="8" class="!block">
                 <button type="button" class="group relative block">
-                    <img class="h-9 w-9 rounded-full object-cover saturate-50 group-hover:saturate-100" src="/assets/images/user-profile.jpeg" alt="" />
+                    <span class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base dark:text-dark-light/80">
+                        MT
+                    </span>
                 </button>
                 <template #content="{ close }">
                     <ul class="w-[250px] !py-0 font-semibold text-dark dark:text-white-dark dark:text-white-light/90">
                         <li>
                             <div class="flex items-center px-4 py-4">
                                 <div class="flex-none">
-                                    <img class="h-10 w-10 rounded-md object-cover" src="/assets/images/user-profile.jpeg" alt="" />
+                                    <span
+                                        class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base dark:text-dark-light/80"
+                                    >
+                                        MT
+                                    </span>
                                 </div>
                                 <div class="ltr:pl-4 rtl:pr-4 -mb-3">
                                     <p class="text-sm mb-1 dark:text-dark-light/60">{{ $t(`${props.nameProfile}`) }}</p>
@@ -22,7 +28,7 @@
                         </li>
                         <template v-if="menuLinks && Object.keys(menuLinks).length > 0">
                             <li v-for="(item, key) in menuLinks" :key="key" class="py-1">
-                                <NuxtLink :to="item.to" class="dark:hover:text-white " @click="close()">
+                                <NuxtLink @click="handleItemClick(item)" :to="item.to" class="dark:hover:text-white cursor-pointer">
                                     <component :is="item.icon" class="mr-2 w-4.5 h-4.5 shrink-0" />
                                     {{ item.label }}
                                 </NuxtLink>
@@ -30,7 +36,7 @@
                         </template>
 
                         <li class="border-t border-white-light dark:border-white-light/10">
-                            <NuxtLink to="" class="!py-3 capitalize text-danger" @click="close()">
+                            <NuxtLink to="" class="!py-3 capitalize text-danger cursor-pointer" @click="close()">
                                 <!-- Icon -->
                                 <svg
                                     class="h-4.5 w-4.5 rotate-90 ltr:mr-2 rtl:ml-2 shrink-0"
@@ -91,4 +97,9 @@
             default: 'ATI9307029F8',
         },
     });
+    // Emits
+    const emit = defineEmits();
+    const handleItemClick = (item: any) => {
+        emit('open-modal', item.label);
+    };
 </script>

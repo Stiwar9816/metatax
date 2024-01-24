@@ -26,7 +26,7 @@
         },
         total: {
             type: Number,
-            default: 2253972947,
+            default: 0,
         },
         icon: Object,
     });
