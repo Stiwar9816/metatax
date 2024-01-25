@@ -3,24 +3,24 @@
         <client-only>
             <Popper :placement="store.rtlClass === 'rtl' ? 'bottom-end' : 'bottom-start'" offsetDistance="8" class="!block">
                 <button type="button" class="group relative block">
-                    <span class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base dark:text-dark-light/80">
+                    <span class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base text-dark-light/80">
                         MT
                     </span>
                 </button>
                 <template #content="{ close }">
-                    <ul class="w-[250px] !py-0 font-semibold text-dark dark:text-white-dark dark:text-white-light/90">
+                    <ul class="w-[250px] !py-0 font-semibold dark:text-white-dark dark:text-white-light/90">
                         <li>
                             <div class="flex items-center px-4 py-4">
                                 <div class="flex-none">
                                     <span
-                                        class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base dark:text-dark-light/80"
+                                        class="flex justify-center items-center w-8 h-8 text-center rounded-full object-cover bg-primary text-base text-dark-light/80"
                                     >
                                         MT
                                     </span>
                                 </div>
                                 <div class="ltr:pl-4 rtl:pr-4 -mb-3">
                                     <p class="text-sm mb-1 dark:text-dark-light/60">{{ $t(`${props.nameProfile}`) }}</p>
-                                    <span class="text-black/60 hover:text-primary dark:text-dark-light/80">
+                                    <span class="text-black/60  dark:text-dark-light/80">
                                         {{ $t(`${props.rfc}`) }}
                                     </span>
                                 </div>

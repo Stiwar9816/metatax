@@ -2,8 +2,8 @@
     <div>
         <ButtonsButtonRoute home="Riesgo fiscal" route-active="Análisis de riesgo fiscal" />
         <div class="panel grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <ButtonsButtonSelect class="col-span-1" :options="optionsSelectView" />
-            <ButtonsButtonSelect class="col-span-1" :options="optionsMeasuringPoint" />
+            <ButtonsButtonSelect class="col-span-1" label="Rango de busqueda" :options="optionsSelectView" />
+            <ButtonsButtonSelect class="col-span-1" label="Puntos de busqueda" :options="optionsMeasuringPoint" />
         </div>
         <div class="grid gap-4 md:grid md:grid-cols-3">
             <CardsCardBase :icon="IconBarChartSteps" label="Emitidos" />
