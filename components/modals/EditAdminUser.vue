@@ -62,7 +62,7 @@
                                             <input id="email" type="email" placeholder="Ingrese su correo electronico" class="form-input" />
                                         </div>
 
-                                        <div class="grid grid-cols-3 gap-4">
+                                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                                             <label class="flex items-center mt-1 cursor-pointer">
                                                 <input type="checkbox" class="form-checkbox" />
                                                 <span class="text-white-dark">Administrador</span>

@@ -30,9 +30,11 @@
                 </button>
             </div>
             <!-- Buttons Actions -->
-
-            <div class="text-right">
-                <input v-model="search" type="search" class="form-input w-auto" placeholder="Buscar..." />
+            <div class="flex items-center gap-8 md:gap-4 ltr:ml-auto rtl:mr-auto">
+                <ButtonsButtonColumnsTable :fields="props.fields" label="Columnas" />
+                <div>
+                    <input v-model="search" type="text" class="form-input" placeholder="Buscar..." />
+                </div>
             </div>
         </div>
 

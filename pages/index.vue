@@ -70,7 +70,7 @@
         },
     ]);
     const fields = ref([
-        { field: 'year', title: 'Año' },
+        { field: 'year', title: 'Año', hide: false  },
         { field: 'issued', title: 'Emitidos' },
         { field: 'received', title: 'Recibidos' },
         { field: 'total', title: 'Monto' },
