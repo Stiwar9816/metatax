@@ -10,8 +10,8 @@
             <InputsInputBase label="Cod. Unidad" placeholder="Ingrese Cod. Unidad" />
             <ButtonsButtonSelect label="Tipo de comprobante" :options="optionsSelectVoucher" />
             <ButtonsButtonSelect label="Contexto" :options="optionsSelectContext" />
+            <ButtonsButtonBase label="Buscar datos" />
         </div>
-        <ButtonsButtonBase label="Buscar datos" />
         <TablesTableBaseExport :fields="fields" :items="itemsTable" />
     </div>
 </template>

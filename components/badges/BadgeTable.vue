@@ -1,6 +1,6 @@
 <template>
-    <span :class="getClass(value)">
-        {{ value ? 'Activo' : 'Inactivo' }}
+    <span :class="getClass(props.value)">
+        {{ props.value ? 'Activo' : 'Inactivo' }}
     </span>
 </template>
 

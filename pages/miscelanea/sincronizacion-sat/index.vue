@@ -1,10 +1,10 @@
 <template>
     <div>
         <ButtonsButtonRoute home="Miscelánea" route-active="Sincronizaciín SAT" />
-        <div class="grid grid-cols-4 gap-4 my-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
             <ButtonsButtonSelect class="col-span-1" label="Periodo de busqueda" :options="optionsSelectSearch" />
         </div>
-        <div class="grid grid-cols-3 py-2 gap-4" v-if="data">
+        <div class="grid grid-cols-1 md:grid-cols-3 py-2 gap-4" v-if="data">
             <div v-for="(item, key) in month" :key="key">
                 <CardsCardRisk :title-card="item" :data="data[key]" />
             </div>
