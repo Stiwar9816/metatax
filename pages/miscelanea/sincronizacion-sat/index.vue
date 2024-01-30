@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ButtonsButtonRoute home="Miscelánea" route-active="Sincronizaciín SAT" />
+        <ButtonsButtonRoute home="Miscelánea" route-active="Sincronización SAT" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
             <ButtonsButtonSelect class="col-span-1" label="Periodo de busqueda" :options="optionsSelectSearch" />
         </div>

@@ -4,7 +4,7 @@
         <form>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:my-4">
                 <InputsInputBase class="col-span-1" type="number" :min="0" label="Monto inicial" placeholder="Monto inicial" />
-                <InputsInputDateBase class="col-span-1" label="Periodo" placeholder="Seleccione un periodo" />
+                <InputsInputDateMonth class="col-span-1" label="Periodo" placeholder="Seleccione un periodo" />
                 <ButtonsButtonBase class="md:mt-6 my-2" type="submit" label="Buscar datos" />
             </div>
         </form>

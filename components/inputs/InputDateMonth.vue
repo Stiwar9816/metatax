@@ -2,29 +2,42 @@
     <div>
         <client-only>
             <label :for="props.inputId">{{ props.label }}</label>
-            <flat-pickr :id="props.inputId" v-model="date" class="form-input" :config="configs.basic" :placeholder="props.placeholder" />
+            <flat-pickr v-model="dateMonth" class="form-input" :config="basic.monthSelect" :placeholder="props.placeholder" />
         </client-only>
     </div>
 </template>
 
-<script setup lang="ts">
+<!-- script -->
+<script lang="ts" setup>
     //flatpickr
+    import flatpickr from 'flatpickr';
     import flatPickr from 'vue-flatpickr-component';
+    import monthSelectPlugin from 'flatpickr/dist/plugins/monthSelect/index.js';
     // Locale
     import { Spanish as SpanishLocale } from 'flatpickr/dist/l10n/es.js';
     // CSS
+    import 'flatpickr/dist/plugins/monthSelect/style.css';
     import 'flatpickr/dist/flatpickr.min.css';
     import 'flatpickr/dist/themes/dark.css';
-    // Const
-    const date = ref<string>('');
-    const configs = {
-        basic: {
-            shorthand: true,
-            dateFormat: 'd - m - Y',
+
+    const dateMonth = ref<string>('');
+
+    flatpickr.setDefaults({
+        disableMobile: true,
+    });
+
+    const basic = ref({
+        monthSelect: {
+            plugins: [
+                monthSelectPlugin({
+                    shorthand: true,
+                    dateFormat: 'm-Y',
+                    theme: 'dark',
+                }),
+            ],
             locale: SpanishLocale,
-            theme: 'dark',
         },
-    };
+    });
     // Props
     const props = defineProps({
         inputId: String,

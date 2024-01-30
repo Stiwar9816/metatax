@@ -17,7 +17,7 @@
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.7",
         "@vercel/analytics": "^1.1.2",
-        "@vercel/speed-insights": "^1.0.7",
+        "@vercel/speed-insights": "^1.0.8",
         "autoprefixer": "^10.4.12",
         "nuxt": "^3.9.3",
         "nuxt-bootstrap-icons": "^1.1.5",

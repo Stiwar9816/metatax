@@ -2,8 +2,8 @@
     <div>
         <ButtonsButtonRoute home="Miscelánea" route-active="Reporte general de conceptos" />
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
-            <InputsInputDate label="Fecha inicial" />
-            <InputsInputDate label="Fecha final" />
+            <InputsInputDateBase label="Fecha inicial" />
+            <InputsInputDateBase label="Fecha final" />
             <InputsInputBase label="RFC Receptor" placeholder="Ingrese RFC Receptor" />
             <InputsInputBase label="N° Identifacición" type="number" :min="0" placeholder="Ingrese N° Identifacición" />
             <InputsInputBase label="Cod. Prod / Serv" type="number" :min="0" placeholder="Ingrese Cod. Prod / Serv" />

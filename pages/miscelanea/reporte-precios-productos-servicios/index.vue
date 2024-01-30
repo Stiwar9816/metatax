@@ -2,7 +2,7 @@
     <div>
         <ButtonsButtonRoute home="Miscelánea" route-active="Reporte de precios de productos y servicios" />
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
-            <InputsInputDateBase class="col-span-1" label="Periodo de busqueda" />
+            <InputsInputDateMonth class="col-span-1" label="Periodo de busqueda" />
             <ButtonsButtonSelect class="col-span-1" label="Periodo de busqueda" :options="optionsSelectSearch" />
             <ButtonsButtonBase class="md:mt-6 my-2" type="submit" label="Buscar datos" />
         </div>
