@@ -165,27 +165,27 @@
     ];
     const linkReporteNomina: Links[] = [
         {
-            to: '',
+            to: '/nomina/reporte-cfdi',
             titleButton: "Reportes CFDI's",
         },
         {
-            to: '',
+            to: '/nomina/reporte-complemento',
             titleButton: 'Reporte de complemento',
         },
         {
-            to: '',
+            to: '/nomina/reporte-desglose',
             titleButton: 'Reporte de nómina con desglose',
         },
         {
-            to: '',
+            to: '/nomina/reporte-cfdi-cancelados',
             titleButton: 'Reporte de CFDI cancelados',
         },
         {
-            to: '',
+            to: '/nomina/reporte-nomina-fecha-cancelacion',
             titleButton: 'Reporte de CFDI por fecha de cancelación',
         },
         {
-            to: '',
+            to: '/nomina/control-cfdi',
             titleButton: 'Control CFDI por nómina',
         },
     ];

@@ -67,7 +67,7 @@
                     },
                 },
             },
-            colors: ['#805dca', '#e7515a'],
+            colors: ['#805dca', '#e7515a', '#4361ee', '#805dca', '#e2a03f'],
             dataLabels: {
                 enabled: true,
             },
