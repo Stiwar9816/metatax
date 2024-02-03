@@ -1,9 +1,10 @@
 <template>
     <div>
-        <ButtonsButtonRoute home="Miscelánea" route-active="Reporte de precios de productos y servicios" />
-        <div class="panel grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
-            <InputsInputDateMonth class="col-span-1" label="Periodo de busqueda" />
-            <ButtonsButtonSelect class="col-span-1" label="Periodo de busqueda" :options="optionsSelectSearch" />
+        <ButtonsButtonRoute home="Nómina" route-active="Reporte de nómina cancelados" />
+        <div class="panel grid grid-cols-1 md:grid-cols-4 gap-4 mt-4 md:my-4">
+            <InputsInputDateBase class="col-span-1" label="Fecha Inicial" />
+            <InputsInputDateBase label="Fecha Final" />
+            <InputsInputBase label="RFC" placeholder="Ingrese un RFC" />
             <ButtonsButtonBase class="md:mt-6 my-2" type="submit" label="Buscar datos" />
         </div>
         <TablesTableBaseExport :fields="fields" :items="itemsTable" />
@@ -11,25 +12,14 @@
 </template>
 
 <script setup lang="ts">
-    useHead({ title: 'Reporte de precios de productos y servicios' });
-    // Types
-    import type { OptionsSelect } from '~/../../types/index';
-    // Const
-    const optionsSelectSearch: OptionsSelect[] = [
-        {
-            value: 'emitidos',
-            text: 'Emitidos',
-        },
-        {
-            value: 'recibidos',
-            text: 'Recibidos',
-        },
-    ];
+    useHead({ title: 'Reporte de nómina cancelados' });
     const fields = ref([
-        { field: 'client', title: 'Cod Producto / Servicio' },
-        { field: 'name', title: 'Descripción' },
-        { field: 'min', title: 'Min Valor Unit.' },
-        { field: 'max', title: 'Max Valor Unit.' },
+        { field: 'client', title: 'Fecha de cancelación' },
+        { field: 'client', title: 'Fecha de timbre' },
+        { field: 'name', title: 'Fecha de emisión' },
+        { field: 'min', title: 'Total' },
+        { field: 'max', title: 'PAC' },
+        { field: '', title: 'Acciones' },
     ]);
     const itemsTable = [
         {

@@ -1,18 +1,15 @@
 <template>
     <div>
         <ButtonsButtonRoute home="Nómina" route-active="Reporte de complemento" />
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="panel grid grid-cols-1 md:grid-cols-4 gap-4 mt-4 md:my-4">
             <InputsInputDateBase class="col-span-1" label="Fecha Inicial" />
             <InputsInputDateBase label="Fecha Final" />
             <InputsInputBase label="RFC" placeholder="Ingrese un RFC" />
             <ButtonsButtonBase class="md:mt-6 my-2" type="submit" label="Buscar datos" />
         </div>
-        <ChartsChartDonut
-            titleChart="Reporte de complemento de nómina"
-            file-name-export="Reporte_de_complementos_de_nómina"
-            :labels="labels"
-            :series="chartSeries"
-        />
+        <div class="grid my-4 gap-4">
+            <CardsCardStatistics :labels="labels" :items="items" />
+        </div>
         <TablesTableBaseExport :fields="fields" :items="itemsTable" />
     </div>
 </template>
@@ -64,5 +61,5 @@
     ];
     // Charts Data
     const labels: string[] = ['Sueldos', 'Gravados', 'Exento', 'Otras deducciones', 'Impuestos retenidos'];
-    const chartSeries = ref([44, 55, 13, 80, 90]);
+    const items = ref([2395834.70, 1983991.87, 411842.83, 176321.06, 246325.01]);
 </script>

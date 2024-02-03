@@ -7,14 +7,13 @@
         <div class="grid gap-4 overflow-hidden text-[#515365] sm:grid-cols-5 grid-cols-2 md:place-items-center my-2">
             <div v-for="(item, key) in labels" :key="key" class="mt-2">
                 <span class="text-white-dark dark:text-white-light font-semibold text-lg">{{ item }}</span>
-                <div class="text-base text-[#e7515a] hover:text-[#ad4045] font-semibold">{{ currencyFormatter('MXN', props.items![key]) }} MXN</div>
+                <div class="text-sm text-[#e7515a] hover:text-[#ad4045] font-semibold">{{ currencyFormatter('MXN', props.items![key]) }} MXN</div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-    import { currencyFormatter } from '../../utils/currencyFormatter';
     // Props
     const props = defineProps({
         labels: Array as PropType<string[]>,

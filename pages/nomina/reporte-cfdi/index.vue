@@ -1,7 +1,7 @@
 <template>
     <div>
         <ButtonsButtonRoute home="Nómina" route-active="Reporte CFDI's" />
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="panel grid grid-cols-1 md:grid-cols-4 gap-4 mt-4 md:my-4">
             <InputsInputDateBase label="Fecha Inicial" />
             <InputsInputDateBase label="Fecha Final" />
             <InputsInputBase label="RFC" placeholder="Ingrese un RFC" />

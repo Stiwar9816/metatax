@@ -1,7 +1,7 @@
 <template>
     <div>
         <ButtonsButtonRoute home="Miscelánea" route-active="Reporte general de conceptos" />
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
+        <div class="panel grid grid-cols-1 md:grid-cols-4 gap-4 py-4">
             <InputsInputDateBase label="Fecha inicial" />
             <InputsInputDateBase label="Fecha final" />
             <InputsInputBase label="RFC Receptor" placeholder="Ingrese RFC Receptor" />
@@ -10,7 +10,7 @@
             <InputsInputBase label="Cod. Unidad" placeholder="Ingrese Cod. Unidad" />
             <ButtonsButtonSelect label="Tipo de comprobante" :options="optionsSelectVoucher" />
             <ButtonsButtonSelect label="Contexto" :options="optionsSelectContext" />
-            <ButtonsButtonBase label="Buscar datos" />
+            <ButtonsButtonBase class="my-2" label="Buscar datos" />
         </div>
         <TablesTableBaseExport :fields="fields" :items="itemsTable" />
     </div>
