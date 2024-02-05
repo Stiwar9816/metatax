@@ -66,6 +66,9 @@
                         'transfer_iva',
                         'transfer_ieps',
                         'amount_paid_mxn',
+                        'total_retention',
+                        'total_transfer',
+                        'discount',
                     ]"
                     :key="values"
                     v-slot:[values]="data"

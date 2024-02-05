@@ -265,15 +265,15 @@
     ];
     const linkInconsistenciasComerciales: Links[] = [
         {
-            to: '',
+            to: '/inconsistencias-comerciales/formas-pago',
             titleButton: 'Formas de pago',
         },
         {
-            to: '',
+            to: '/inconsistencias-comerciales/usos-cfdi',
             titleButton: "Usos CFDI's",
         },
         {
-            to: '',
+            to: '/inconsistencias-comerciales/moneda',
             titleButton: 'Moneda',
         },
     ];

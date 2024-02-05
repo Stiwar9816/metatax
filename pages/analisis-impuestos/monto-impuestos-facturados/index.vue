@@ -7,8 +7,8 @@
             <ButtonsButtonBase class="md:mt-6 my-2" type="submit" label="Obtener montos" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 my-4 gap-4">
-            <CardsCardTaxes title="Impuestos locales trasladados" :value="74137" color-from="indigo-500" color-to="indigo-400" />
-            <CardsCardTaxes title="Impuestos locales retenidos" :value="74137" color-from="blue-500" color-to="blue-400" />
+            <CardsCardTaxes title="Impuestos locales trasladados" :value="74137" />
+            <CardsCardTaxes title="Impuestos locales retenidos" :value="74137" />
         </div>
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <TablesTableSimple title="Traslados" :fields="fields" :items="itemsTable" />
