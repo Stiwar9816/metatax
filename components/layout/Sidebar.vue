@@ -279,15 +279,15 @@
     ];
     const linkCoincidenciasListaNegra: Links[] = [
         {
-            to: '',
+            to: '/listas-negras/alerta-69',
             titleButton: 'Alertas lista negra 69',
         },
         {
-            to: '',
+            to: '/listas-negras/alerta-69b',
             titleButton: 'Alertas lista negra 69B',
         },
         {
-            to: '',
+            to: '/listas-negras/coincidencia-alerta-69b',
             titleButton: 'Coincidencias lista negra 69B',
         },
     ];
