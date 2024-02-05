@@ -1,5 +1,5 @@
 <template>
-    <span :class="getClass(props.value, props.bgBad)">
+    <span :class="getClass(props.value, props.bgTrue, props.bgBad)">
         {{ props.value ? `${props.textTrue}` : `${props.textBad}` }}
     </span>
 </template>
@@ -15,10 +15,14 @@
             type: String,
             default: 'Inactivo',
         },
+        bgTrue: {
+            type: String,
+            default: 'bg-success',
+        },
         bgBad: {
             type: String,
             default: 'bg-danger',
         },
     });
-    const getClass = (value: boolean, bgBad: string) => (value ? 'badge bg-success' : `badge ${bgBad}`);
+    const getClass = (value: boolean, bgTrue: string, bgBad: string) => (value ? `badge ${bgTrue}` : `badge ${bgBad}`);
 </script>

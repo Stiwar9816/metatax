@@ -54,10 +54,34 @@
                 :nextArrow="nextArrow"
             >
                 <!-- Formatted Currency -->
-                <template v-for="values in ['issued', 'received', 'total']" :key="values" v-slot:[values]="data">
+                <template
+                    v-for="values in [
+                        'subtotal',
+                        'total',
+                        'exchange_rate',
+                        'total_mxn',
+                        'retention_isr',
+                        'retention_iva',
+                        'retention_ieps',
+                        'transfer_iva',
+                        'transfer_ieps',
+                        'amount_paid_mxn',
+                    ]"
+                    :key="values"
+                    v-slot:[values]="data"
+                >
                     <span>{{ currencyFormatter('MXN', data.value[values]) }}</span>
                 </template>
                 <!-- Formatted Currency -->
+
+                <!-- Badges Status & Amount_paid_mxn -->
+                <template v-for="status in ['status']" :key="status" v-slot:[status]="data">
+                    <BadgesBadgeTable :value="data.value[status]" textTrue="Pagado" textBad="No pagado" bgBad="bg-danger" />
+                </template>
+                <template v-for="balance in ['balance']" :key="balance" v-slot:[balance]="data">
+                    <BadgesBadgeCurrencyTable :value="data.value[balance]" />
+                </template>
+                <!-- Badges Status & Amount_paid_mxn -->
             </vue3-datatable>
         </div>
     </div>

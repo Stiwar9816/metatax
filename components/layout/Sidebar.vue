@@ -191,33 +191,33 @@
     ];
     const linkAnalisisImpuestos: Links[] = [
         {
-            to: '',
+            to: '/analisis-impuestos/monto-impuestos-facturados',
             titleButton: 'Montos por impuestos facturados',
         },
         {
-            to: '',
-            titleButton: 'Impuestos efectivamente cobrados/pagados',
+            to: '/analisis-impuestos/impuestos-cobrados-pagados',
+            titleButton: 'Impuestos efectivamente cobrados o pagados',
         },
         {
-            to: '',
+            to: '/analisis-impuestos/impuestos-nomina',
             titleButton: 'Análisis de impuestos de nómina',
         },
     ];
     const linkRelacionDocumentos: Links[] = [
         {
-            to: '',
+            to: '/relaciones-documentos/analisis-cfdi-relacionados',
             titleButton: "Análisis de CFDI vs CFDI's relacionados",
         },
         {
-            to: '',
+            to: '/relaciones-documentos/analisis-cfdi-comprobantes',
             titleButton: 'Análisis de CFDI vs comprobantes de pagos',
         },
         {
-            to: '',
+            to: '/relaciones-documentos/analisis-comprobantes-cfdi',
             titleButton: 'Análisis de comprobantes de pagos vs CFDI',
         },
         {
-            to: '',
+            to: '/relaciones-documentos/cfdi-relaciones',
             titleButton: "CFDI's y sus relaciones",
         },
     ];

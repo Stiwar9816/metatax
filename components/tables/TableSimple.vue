@@ -1,17 +1,14 @@
 <template>
-    <div class="panel mt-6">
+    <div class="panel h-full w-full">
         <div class="mb-5 flex flex-col gap-5 md:flex-row md:items-center">
-            <div class="flex items-center gap-8 md:gap-4 ltr:ml-auto rtl:mr-auto">
-                <ButtonsButtonColumnsTable :fields="props.fields" label="Columnas" />
-                <input v-model="search" type="text" class="form-input" placeholder="Buscar..." />
-            </div>
+            <h5 class="text-lg font-semibold dark:text-white-light">{{ props.title }}</h5>
         </div>
 
         <div class="datatable">
             <vue3-datatable
                 :rows="props.items"
                 :columns="props.fields"
-                :totalRows="props.items!.length"
+                :totalRows="props.items?.length"
                 :search="search"
                 :sortable="props.sortable"
                 skin="whitespace-nowrap bh-table-hover"
@@ -21,16 +18,7 @@
                 :lastArrow="lastArrow"
                 :previousArrow="previousArrow"
                 :nextArrow="nextArrow"
-            >
-                <!-- Badges Status & Available -->
-                <template v-for="available in ['isStatus']" :key="available" v-slot:[available]="data">
-                    <BadgesBadgeTable :value="data.value[available]" textTrue="Exitoso" textBad="Procesando" bgBad="bg-warning" />
-                </template>
-                <template v-for="status in ['isAvailable']" :key="status" v-slot:[status]="data">
-                    <BadgesBadgeTable :value="data.value[status]" textTrue="Si" textBad="No" />
-                </template>
-                <!-- Badges Status & Available -->
-            </vue3-datatable>
+            />
         </div>
     </div>
 </template>
@@ -61,5 +49,6 @@
             type: Boolean,
             default: true,
         },
+        title: String,
     });
 </script>
