@@ -223,43 +223,43 @@
     ];
     const linkInconsistenciasFiscales: Links[] = [
         {
-            to: '',
+            to: '/inconsistencias-fiscales/documento-relacionado-inexistente',
             titleButton: "CFDI's de pago con documento relacionado inexistente",
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/relaciones-no-permitidas-cfdi-pago',
             titleButton: "Relaciones no permitidas en CFDI's de pago",
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/canceladas-comprobantes-pago',
             titleButton: 'Facturas canceladas que están en comprobantes de pago',
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/pago-extemporaneos',
             titleButton: "CFDI's de pago extemporáneos",
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/inconsistencias-metodo-forma-pago',
             titleButton: "CFDI's con inconsistencias entre método y forma de pago",
         },
         {
-            to: '',
-            titleButton: 'Regímnes fiscales',
+            to: '/inconsistencias-fiscales/regimenes-fiscales',
+            titleButton: 'Regímenes fiscales',
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/lugar-expedicion',
             titleButton: 'Lugar de expedición',
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/sustituidos-no-cancelados',
             titleButton: 'Sustituidos no cancelados',
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/no-sustituidos-cancelados',
             titleButton: 'No sustituidos cancelados',
         },
         {
-            to: '',
+            to: '/inconsistencias-fiscales/relacionados-inexistentes',
             titleButton: 'Relacionados inexistentes',
         },
     ];

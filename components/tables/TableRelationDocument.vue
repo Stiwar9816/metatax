@@ -69,6 +69,8 @@
                         'total_retention',
                         'total_transfer',
                         'discount',
+                        'exchange_rate_dr',
+                        'amount_paid_dr'
                     ]"
                     :key="values"
                     v-slot:[values]="data"
