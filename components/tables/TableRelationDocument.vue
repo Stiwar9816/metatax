@@ -70,7 +70,8 @@
                         'total_transfer',
                         'discount',
                         'exchange_rate_dr',
-                        'amount_paid_dr'
+                        'amount_paid_dr',
+                        'amount_mxn',
                     ]"
                     :key="values"
                     v-slot:[values]="data"

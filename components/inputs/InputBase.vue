@@ -1,7 +1,14 @@
 <template>
     <div>
         <label :for="props.inputId">{{ props.label }}</label>
-        <input :id="props.inputId" :type="props.type" :min="props.min" :placeholder="props.placeholder" class="form-input" required />
+        <input
+            :id="props.inputId"
+            :type="props.type"
+            :min="props.min"
+            :placeholder="props.placeholder"
+            class="form-input"
+            required
+        />
     </div>
 </template>
 

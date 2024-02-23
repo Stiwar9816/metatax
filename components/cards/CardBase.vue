@@ -3,7 +3,7 @@
         <div class="mb-4 flex items-center">
             <div class="grid h-10 w-10 place-content-center rounded-full dark:text-white-light">
                 <!-- Icon -->
-                <component :is="icon" />
+                <component :is="props.icon" />
                 <!-- Icon -->
             </div>
             <div class="ltr:ml-2 rtl:mr-2">

@@ -105,31 +105,31 @@
     ];
     const linkReportesConciliatorios: Links[] = [
         {
-            to: '',
+            to: '/reportes-conciliatorios/resumen',
             titleButton: 'Resumen de la cuenta',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/emitidos-no-cancelados',
             titleButton: 'Emitidos no cancelados',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/recibidos-no-cancelados',
             titleButton: 'Recibidos no cancelados',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/cancelados',
             titleButton: 'Cancelados',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/documentos-fecha-cancelacion',
             titleButton: 'Documentos por fecha de cancelación',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/antiguedad-saldos',
             titleButton: 'Antigüedad de saldos',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/integracion-iva-sat',
             titleButton: 'Integración IVA-SAT',
         },
         {
@@ -145,11 +145,11 @@
             titleButton: 'Retenciones por fecha de cancelación',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/deudores-acreedores',
             titleButton: 'Listado deudores/acreedores',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/conciliacion-erp',
             titleButton: 'Conciliación ERP',
         },
     ];
