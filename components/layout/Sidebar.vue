@@ -155,11 +155,11 @@
     ];
     const linkReportesConciliatoriosAdicional: Links[] = [
         {
-            to: '',
+            to: '/reportes-conciliatorios/duplicidad-datos-generales',
             titleButton: 'Duplicidad por datos generales',
         },
         {
-            to: '',
+            to: '/reportes-conciliatorios/duplicidad-datos-cfdi',
             titleButton: 'Duplicidad por datos del CFDI',
         },
     ];
