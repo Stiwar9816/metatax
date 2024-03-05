@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
     useHead({ title: 'Sincronización SAT' });
+    
     // Types
     import type { OptionsSelect } from '~/../../types/index';
     // Const

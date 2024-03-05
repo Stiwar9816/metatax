@@ -28,18 +28,24 @@ export default defineNuxtConfig({
             ],
         },
     },
-
     css: ['~/assets/css/app.css'],
-
     postcss: {
         plugins: {
             tailwindcss: {},
             autoprefixer: {},
         },
     },
-
-    modules: ['@pinia/nuxt', '@nuxtjs/i18n', 'nuxt-bootstrap-icons'],
-
+    modules: ['@pinia/nuxt', '@nuxtjs/i18n', 'nuxt-bootstrap-icons', 'nuxt-graphql-client'],
+    runtimeConfig: {
+        public: {
+            GQL_HOST: import.meta.env.GQL_HOST,
+        },
+    },
+    router: {
+        options: {
+            linkExactActiveClass: 'active',
+        },
+    },
     i18n: {
         locales: [
             { code: 'en', file: 'en.json' },
@@ -50,11 +56,6 @@ export default defineNuxtConfig({
         strategy: 'no_prefix',
         langDir: 'locales/',
     },
-
-    router: {
-        options: { linkExactActiveClass: 'active' },
-    },
-
     devtools: {
         enabled: true,
     },

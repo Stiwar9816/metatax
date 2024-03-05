@@ -34,6 +34,7 @@
     "dependencies": {
         "@pinia/nuxt": "^0.5.1",
         "apexcharts": "^3.35.5",
+        "nuxt-graphql-client": "^0.2.33",
         "pinia": "^2.0.22",
         "vue-height-collapsible": "^0.1.1",
         "vue-i18n": "^9.2.2",

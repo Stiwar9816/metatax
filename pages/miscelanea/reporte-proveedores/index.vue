@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
     useHead({ title: 'Reporte de proveedores' });
+    
     const fields = ref([
         { field: 'vendor', title: 'Proveedor' },
         { field: 'name', title: 'Nombre' },

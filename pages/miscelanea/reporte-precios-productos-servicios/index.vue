@@ -12,6 +12,7 @@
 
 <script setup lang="ts">
     useHead({ title: 'Reporte de precios de productos y servicios' });
+    
     // Types
     import type { OptionsSelect } from '~/../../types/index';
     // Const
