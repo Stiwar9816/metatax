@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="ltr:pl-4 rtl:pr-4 -mb-3">
                                     <p class="text-sm mb-1 dark:text-dark-light/60">{{ $t(`${props.nameProfile}`) }}</p>
-                                    <span class="text-black/60  dark:text-dark-light/80">
+                                    <span class="text-black/60 dark:text-dark-light/80">
                                         {{ $t(`${props.rfc}`) }}
                                     </span>
                                 </div>
@@ -36,7 +36,7 @@
                         </template>
 
                         <li class="border-t border-white-light dark:border-white-light/10">
-                            <NuxtLink to="" class="!py-3 capitalize text-danger cursor-pointer" @click="close()">
+                            <NuxtLink @click="handleLogout" class="!py-3 capitalize text-danger cursor-pointer">
                                 <!-- Icon -->
                                 <svg
                                     class="h-4.5 w-4.5 rotate-90 ltr:mr-2 rtl:ml-2 shrink-0"
@@ -101,5 +101,10 @@
     const emit = defineEmits();
     const handleItemClick = (item: any) => {
         emit('open-modal', item.label);
+    };
+
+    const handleLogout = () => {
+        const auth = useAuthStore();
+        auth.logout();
     };
 </script>

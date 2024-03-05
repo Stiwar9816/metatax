@@ -11,6 +11,9 @@
 
 <script setup lang="ts">
     useHead({ title: 'Reporte de proveedores' });
+    definePageMeta({
+        middleware: ['auth'],
+    });
     const fields = ref([
         { field: 'vendor', title: 'Proveedor' },
         { field: 'name', title: 'Nombre' },

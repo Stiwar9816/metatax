@@ -58,7 +58,6 @@
     const { setLocale } = useI18n();
     onMounted(() => {
         appSetting.init(setLocale);
-
         window.onscroll = () => {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 showTopButton.value = true;

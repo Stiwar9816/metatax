@@ -73,7 +73,7 @@
     // Links Menu
     const linkRiesgoFiscal: Links[] = [
         {
-            to: '/',
+            to: '/riesgo-fiscal',
             titleButton: 'Análisis de riesgo fiscal',
         },
     ];
