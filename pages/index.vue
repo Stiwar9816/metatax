@@ -39,6 +39,7 @@
                                         id="rfc"
                                         type="rfc"
                                         placeholder="Ingrese su RFC"
+                                        required
                                         class="form-input ps-10 placeholder:text-white-dark"
                                     />
                                     <span class="absolute start-4 top-1/2 -translate-y-1/2">
@@ -54,6 +55,7 @@
                                         id="email"
                                         type="email"
                                         placeholder="Ingrese su usuario"
+                                        required
                                         class="form-input ps-10 placeholder:text-white-dark"
                                     />
                                     <span class="absolute start-4 top-1/2 -translate-y-1/2">
@@ -69,6 +71,7 @@
                                         id="password"
                                         type="password"
                                         placeholder="Ingrese su contraseña"
+                                        required
                                         class="form-input ps-10 placeholder:text-white-dark"
                                     />
                                     <span class="absolute start-4 top-1/2 -translate-y-1/2">
@@ -125,6 +128,9 @@
             password: state.password,
         };
         await authStore.login(signinInput);
-        router.push({ name: 'riesgo-fiscal' });
+        if (authStore.authenticated) {
+            router.push({name: 'riesgo-fiscal'})
+        }
     };
+    //    if (login.) return router.push({ name: 'riesgo-fiscal' });
 </script>

@@ -14,9 +14,7 @@
 
 <script setup lang="ts">
     useHead({ title: 'Sincronización SAT' });
-    definePageMeta({
-        middleware: ['auth'],
-    });
+    
     // Types
     import type { OptionsSelect } from '~/../../types/index';
     // Const

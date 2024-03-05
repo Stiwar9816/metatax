@@ -28,9 +28,7 @@
 
 <script setup lang="ts">
     useHead({ title: 'Riesgo fiscal' });
-    definePageMeta({
-        middleware: ['auth'],
-    });
+    
     // Icons
     import IconBarChartSteps from '~/components/icons/IconBarChartSteps.vue';
     // Types
