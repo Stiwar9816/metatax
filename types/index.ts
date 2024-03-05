@@ -1,4 +1,4 @@
-export type { User, AuthState, SigninInput } from './auth';
+export type { User, SigninInput, DataUser } from './auth';
 export type { Language } from './locale';
 export type { OptionsSelect } from './optionsSelect';
 export type { InputType } from './input';

@@ -35,7 +35,7 @@
                                 <label for="rfc">RFC</label>
                                 <div class="relative text-white-dark">
                                     <input
-                                        v-model="state.rfc"
+                                        v-model="data.rfc"
                                         id="rfc"
                                         type="rfc"
                                         placeholder="Ingrese su RFC"
@@ -51,7 +51,7 @@
                                 <label for="email">Correo electronico</label>
                                 <div class="relative text-white-dark">
                                     <input
-                                        v-model="state.email"
+                                        v-model="data.email"
                                         id="email"
                                         type="email"
                                         placeholder="Ingrese su usuario"
@@ -67,11 +67,12 @@
                                 <label for="password">Contraseña</label>
                                 <div class="relative text-white-dark">
                                     <input
-                                        v-model="state.password"
+                                        v-model="data.password"
                                         id="password"
                                         type="password"
                                         placeholder="Ingrese su contraseña"
                                         required
+                                        autocomplete="off"
                                         class="form-input ps-10 placeholder:text-white-dark"
                                     />
                                     <span class="absolute start-4 top-1/2 -translate-y-1/2">
@@ -107,30 +108,23 @@
     definePageMeta({
         layout: 'auth-layout',
     });
-    import { useAuthStore } from '../stores/useAuth';
     import type { SigninInput } from '~/types';
     const router = useRouter();
     const authStore = useAuthStore();
 
-    const initialState: SigninInput = {
+    const data: SigninInput = reactive({
         rfc: '',
         email: '',
         password: '',
-    };
-    const state = reactive({
-        ...initialState,
     });
 
     const handleLogin = async () => {
-        const signinInput: SigninInput = {
-            rfc: state.rfc,
-            email: state.email,
-            password: state.password,
+        const credentials: SigninInput = {
+            rfc: data.rfc,
+            email: data.email,
+            password: data.password,
         };
-        await authStore.login(signinInput);
-        if (authStore.authenticated) {
-            router.push({name: 'riesgo-fiscal'})
-        }
+        await authStore.login(credentials);
+        if (authStore.authenticated) router.push({ name: 'riesgo-fiscal' });
     };
-    //    if (login.) return router.push({ name: 'riesgo-fiscal' });
 </script>

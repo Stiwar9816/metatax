@@ -39,7 +39,6 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             GQL_HOST: import.meta.env.GQL_HOST,
-            BASE_URL: import.meta.env.VITE_BASE_URL,
         },
     },
     router: {
